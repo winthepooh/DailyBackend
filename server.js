@@ -10,6 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //*****ROUTES*******
 
+app.get("/", (req, res) => {
+  res.send("hello");
+});
+
 //Check username
 let checkuser = require("./routes/checkuser");
 app.use("/checkuser", checkuser);
